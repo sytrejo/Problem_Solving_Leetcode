@@ -50,3 +50,49 @@ You must write an algorithm that uses only constant extra space.
         return index;
     }
 }
+
+/*
+ * Time complexity: O(n) where n is the length of the input array
+ * 
+ * However, this is another potential solution. 
+ * 
+ * class StringCompression {
+    public int compress(char[] chars) {
+        // Initialize the index for the position in the compressed array
+        int index = 0;
+        // Initialize the index for iterating through the input array
+        int i = 0;
+
+        // Loop through the entire array
+        while (i < chars.length) {
+            // Start j from the current position i
+            int j = i;
+            
+            // Move j forward as long as the characters are the same
+            while (j < chars.length && chars[j] == chars[i]) {
+                j++;
+            }
+
+            // Store the current character at the current index position
+            chars[index++] = chars[i];
+            
+            // Calculate the count of the current character
+            int count = j - i;
+            
+            // If the count is greater than 1, convert it to a string and store each digit
+            if (count > 1) {
+                for (char c : Integer.toString(count).toCharArray()) {
+                    chars[index++] = c;
+                }
+            }
+
+            // Move i to the next new character
+            i = j;
+        }
+
+        // Return the length of the compressed array
+        return index;
+    }
+}
+
+ */
