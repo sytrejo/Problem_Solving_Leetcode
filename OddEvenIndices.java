@@ -10,7 +10,7 @@ import java.lang.classfile.components.ClassPrinter.ListNode;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class OddEvenIndices {
     public ListNode oddEvenList(ListNode head) {
         ListNode odd=new ListNode();
         ListNode even =new ListNode();
