@@ -1,5 +1,3 @@
-import java.lang.classfile.components.ClassPrinter.ListNode;
-
 class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;  

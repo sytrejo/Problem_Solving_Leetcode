@@ -1,6 +1,4 @@
-import java.lang.classfile.components.ClassPrinter.ListNode;
 import java.util.*;
-
 
 
 class TwinSum {
@@ -25,4 +23,12 @@ class TwinSum {
 
         return maximumSum;
     }
+
+    public class ListNode {
+            int val;
+            ListNode next;
+            ListNode() {}
+            ListNode(int val) { this.val = val; }
+            ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+         }
 }
